@@ -8,6 +8,8 @@
   --secondary-text-color: rgba(255, 255, 255, 0.6);
   --background-color: #fff;
   --secondary-background-color: #f5f4fa;
+  --cards-margin-negative: -30px;
+  --cards-margin: 30px;
 }
 
 /* ============= TEST CAMP ============ */
@@ -101,7 +103,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  background-color: tomato;
 }
 
 /* ========================== HEADER ========================== */
@@ -112,7 +113,6 @@ body {
 
 .header .container {
   display: flex;
-  align-items: center;
 }
 
 .header {
@@ -164,26 +164,32 @@ body {
 .hero {
   background-color: #2f303a;
   text-align: center;
+  padding: 200px 0px;
 }
 
 .hero-title {
   font-weight: 900;
   font-size: 44px;
-  line-height: 60px;
-  /* or 136% */
-
-  text-align: center;
+  line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--background-color);
 }
 
 .hero-button {
-  background-color: var(--accent-color);
-  cursor: pointer;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+  letter-spacing: 0.06em;
   color: var(--background-color);
-  border-radius: 4px;
+  width: 200px;
+  height: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  border: 0px;
+  cursor: pointer;
 }
 
 .hero-button:hover,
@@ -202,21 +208,54 @@ body {
 .portfolio-unique-content {
   padding: 0 auto;
 }
-.small-titles {
+.section-titles {
   /* font-family: var(--main-font); */
   /* font-style: normal; */
-  font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  margin-bottom: 10px;
 
   color: var(--title-color);
 }
 
-.small-description {
-  /* font-family: var(--main-font); */
-  /* font-style: normal; */
+.radio-button:hover,
+.radio-button:focus {
+  background-color: var(--accent-color);
+  cursor: pointer;
+  color: var(--background-color);
+}
+.radio-button {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1, 62;
+  /* identical to box height, or 162% */
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+  border-radius: 4px;
+  border: 0.5px;
+  background-color: var(--secondary-background-color);
+  cursor: pointer;
+  padding: 6px 22px;
+}
+
+.feature-list {
+  width: 1170px;
+  display: flex;
+  margin-left: -30px;
+}
+
+.features-list-item {
+  margin-left: 30px;
+  flex-basis: calc(100% / 4 - 30px);
+}
+
+.section-description {
+  letter-spacing: 0.03em;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -242,6 +281,8 @@ body {
   mix-blend-mode: normal;
 }
 
+/* ======================== OUR TEAM ======================== */
+
 .our-team {
   /* font-family: var(--main-font); */
   /* font-style: normal; */
@@ -254,18 +295,27 @@ body {
   color: var(--title-color);
 }
 
-.team-member {
-  /* font-family: var(--main-font); */
-  /* font-style: normal; */
+.team-list {
+  display: flex;
+  width: 1200px;
+  margin-left: -30px;
+  text-align: center;
+}
+
+.team-list-pic {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  margin-left: 30px;
+}
+
+.team-member-name {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1, 18;
-  /* identical to box height */
+  line-height: 1.87;
 
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  color: var(--title-color);
+  margin-bottom: 10px;
 }
 
 .team-position {
@@ -282,7 +332,29 @@ body {
   color: var(--text-color);
 }
 
-/* ========================== MAIN PART ========================== */
+.profession-descripion {
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+.about-our-team-section {
+  background-color: var(--secondary-background-color);
+}
+
+.about-us-list {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  display: flex;
+  margin-left: -30px;
+}
+.about-what-we-do {
+  margin-left: 30px;
+}
+
+/* ======================== OUR TEAM END ======================== */
+
+/* ========================== MAIN PART END ========================== */
 
 /* ========================== FOOTER ========================== */
 
@@ -301,7 +373,7 @@ footer {
   color: var(--background-color);
 }
 
-.footer-mail {
+.footer-mail-link {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -311,7 +383,7 @@ footer {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-tel {
+.footer-tel-link {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -324,37 +396,25 @@ footer {
 
 /* ======================== PORTFOLIO ======================== */
 
-.radio-button:hover,
-.radio-button:focus {
-  background-color: var(--accent-color);
-  cursor: pointer;
-  color: var(--background-color);
-}
-.radio-button {
-  font-family: var(--main-font);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1, 62;
-  /* identical to box height, or 162% */
-
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  color: var(--title-color);
-  background: #f5f4fa;
-  border-radius: 4px;
-}
-
 .projects-name {
   font-family: var(--main-font);
   font-size: 18px;
   line-height: 2;
   /* identical to box height, or 200% */
-
   letter-spacing: 0.06em;
-
   color: #212121;
+  margin-bottom: 4px;
+}
+
+.radio-buttons-list {
+  display: flex;
+  justify-content: center;
+  margin-left: -8px;
+  margin-bottom: 50px;
+}
+
+.button {
+  margin-left: 8px;
 }
 
 .projects-name-category {
@@ -368,9 +428,18 @@ footer {
   color: var(--text-color);
 }
 
-.about-us-list {
+.portfolio-list {
+  width: 1200px;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: var(--cards-margin-negative);
+  margin-top: var(--cards-margin-negative);
+}
+
+.portfolio-list-item {
+  margin-top: var(--cards-margin);
+  margin-left: var(--cards-margin);
+  flex-basis: calc(100% / 3 - 30px);
 }
 
 .team-list {
@@ -378,7 +447,7 @@ footer {
   justify-content: center;
 }
 
-.item-subscribing {
+.portfolio-item-description {
   border: 1px solid #eeeeee;
   border-top: none;
 }

@@ -44,17 +44,17 @@
             </li>
           </ul>
 
-          <ul class="list navigation-list">
-            <li class="navigation-item">
+          <ul class="list navigation-list navigation-link">
+            <li class="navigation-item-address">
               <a
-                class="navigation-link link mail-link"
+                class="link mail-link navigation-link"
                 lang="en"
                 href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
-            <li class="navigation-item">
-              <a class="navigation-link link tel-link" href="tel:+380961111111"
+            <li class="navigation-item-address">
+              <a class="link tel-link navigation-link" href="tel:+380961111111"
                 >+38 096 111 11 11</a
               >
             </li>
@@ -89,8 +89,8 @@
           </ul>
           <!-- RADIO-BUTTONS END -->
 
-          <ul class="list">
-            <li class="radio-button-item">
+          <ul class="portfolio-list list">
+            <li class="portfolio-list-item">
               <a href="" class="link">
                 <img
                   src="./images/portfolio/technokryak.jpg"
@@ -98,14 +98,14 @@
                   height="294"
                   alt="Технокряк"
                 />
-                <div class="item-subscribing">
+                <div class="portfolio-item-description">
                   <h2 class="projects-name">Технокряк</h2>
                   <p class="projects-name-category">Веб-сайт</p>
                 </div>
               </a>
             </li>
 
-            <li class="radio-button-item">
+            <li class="portfolio-list-item">
               <a href="" class="link">
                 <img
                   src="./images/portfolio/goldenstar.jpg"
@@ -113,7 +113,7 @@
                   height="294"
                   alt="Голден Стар"
                 />
-                <div class="item-subscribing">
+                <div class="portfolio-item-description">
                   <h2 class="projects-name">
                     Постер New Orlean vs Golden Star
                   </h2>
@@ -122,7 +122,7 @@
               </a>
             </li>
 
-            <li class="radio-button-item">
+            <li class="portfolio-list-item">
               <a href="" class="link">
                 <img
                   src="./images/portfolio/seafood.jpg"
@@ -130,14 +130,14 @@
                   height="294"
                   alt="Seafood"
                 />
-                <div class="item-subscribing">
+                <div class="portfolio-item-description">
                   <h2 class="projects-name">Ресторан Seafood</h2>
                   <p class="projects-name-category">Приложение</p>
                 </div>
               </a>
             </li>
 
-            <li class="radio-button-item">
+            <li class="portfolio-list-item">
               <a href="" class="link">
                 <img
                   src="./images/portfolio/headphones.jpg"
@@ -145,14 +145,14 @@
                   height="294"
                   alt="Наушники"
                 />
-                <div class="item-subscribing">
+                <div class="portfolio-item-description">
                   <h2 class="projects-name">Проект Prime</h2>
                   <p class="projects-name-category">Маркетинг</p>
                 </div>
               </a>
             </li>
 
-            <li class="radio-button-item">
+            <li class="portfolio-list-item">
               <a href="" class="link">
                 <img
                   src="./images/portfolio/boxes.jpg"
@@ -160,14 +160,14 @@
                   height="294"
                   alt="коробки"
                 />
-                <div class="item-subscribing">
+                <div class="portfolio-item-description">
                   <h2 class="projects-name">Проект Boxes</h2>
                   <p class="projects-name-category">Приложение</p>
                 </div>
               </a>
             </li>
 
-            <li class="radio-button-item">
+            <li class="portfolio-list-item">
               <a href="" class="link">
                 <img
                   src="./images/portfolio/monitor.jpg"
@@ -175,14 +175,14 @@
                   height="294"
                   alt="Монитор"
                 />
-                <div class="item-subscribing">
+                <div class="portfolio-item-description">
                   <h2 class="projects-name">Inspiration has no Borders</h2>
                   <p class="projects-name-category">Веб-сайт</p>
                 </div>
               </a>
             </li>
 
-            <li class="radio-button-item">
+            <li class="portfolio-list-item">
               <a href="" class="link">
                 <img
                   src="/images/portfolio/book.jpg"
@@ -190,14 +190,14 @@
                   height="294"
                   alt="книги"
                 />
-                <div class="item-subscribing">
+                <div class="portfolio-item-description">
                   <h2 class="projects-name">Издание Limited Edition</h2>
                   <p class="projects-name-category">Дизайн</p>
                 </div>
               </a>
             </li>
 
-            <li class="radio-button-item">
+            <li class="portfolio-list-item">
               <a href="" class="link">
                 <img
                   src="./images/portfolio/LAB.jpg"
@@ -205,14 +205,14 @@
                   height="294"
                   alt="LAB"
                 />
-                <div class="item-subscribing">
+                <div class="portfolio-item-description">
                   <h2 class="projects-name">Проект LAB</h2>
                   <p class="projects-name-category">Маркетинг</p>
                 </div>
               </a>
             </li>
 
-            <li class="radio-button-item">
+            <li class="portfolio-list-item">
               <a href="" class="link">
                 <img
                   src="./images/portfolio/LAPTOP.jpg"
@@ -220,13 +220,12 @@
                   height="294"
                   alt="ноутбук"
                 />
-                <div class="item-subscribing">
+                <div class="portfolio-item-description">
                   <h2 class="projects-name">Growing Business</h2>
                   <p class="projects-name-category">Приложение</p>
                 </div>
               </a>
             </li>
-            --> --> -->
           </ul>
         </div>
       </section>
@@ -236,8 +235,8 @@
     <!-- =========================== FOOTER =========================== -->
     <footer>
       <section>
-        <!-- скрыть заголовок в css-->
-        <h5 class="our-address">Наш адресс</h5>
+        <h5 class="visually-hidden">Наш адресс</h5>
+        <!-- скрытый заголовок -->
 
         <a class="link logo" lang="en" href="./index.html"
           >Web<span class="logo-white">Studio</span></a
@@ -248,13 +247,15 @@
 
         <address class="footer-mail">
           <a
-            class="navigation-link link mail-link"
+            class="navigation-link footer-mail-link link"
             lang="en"
             href="mailto:info@devstudio.com"
             >info@devstudio.com</a
           >
           <br />
-          <a class="navigation-link footer-tel link" href="tel:+380961111111"
+          <a
+            class="navigation-link footer-tel-link link"
+            href="tel:+380961111111"
             >+38 096 111 11 11</a
           >
         </address>
